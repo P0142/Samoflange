@@ -25,6 +25,13 @@ Host the payload file and ntdll.dll's text section on a web server and use the l
 ```
 Omit -x or /x: if not using XOR functionality.
 
+## References:
+https://www.ired.team/offensive-security/code-injection-process-injection/injecting-to-remote-process-via-thread-hijacking
+
+https://maldevacademy.com/
+
+https://trustedsec.com/blog/malware-series-process-injection-mapped-sections
+
 Fun fact, if you pass `PROCESS_CREATION_MITIGATION_POLICY_STRICT_HANDLE_CHECKS_ALWAYS_ON` with `UpdateProcThreadAttribute` it will also mess with spectre mitigations.
 
 If you don't want to use my ntdll.text or are targetting a different windows version you can use the following C++ function to extract the .text section from your own system.
